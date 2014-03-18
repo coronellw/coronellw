@@ -1,0 +1,29 @@
+<% provide(:title, 'Home')  %>
+
+<h1>This is the home page using Quicksand font</h1>
+
+<%= form_for @user, url: {controller: "static_pages", action: "about"} do |f| %>
+	<div class="field">
+		<%= f.label :name, class: "col-xs-2" %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div class="field">
+		<%= f.label :email, class: "col-xs-2" %>
+		<%= f.text_field :email %>
+	</div>
+
+	<div class="field">
+		<%= label_tag :something, "Something", class: "col-xs-2" %>
+		<%= text_field_tag :something %>
+	</div>
+
+	<div class="field">
+		<%= label_tag :stuff, "Stuff", class: "col-xs-2" %>
+		<%= text_field_tag :stuff %>
+	</div>
+
+	<%= f.submit "Go next", class: "col-xs-offset-3 btn btn-primary" %>
+<% end %>
+<br>
+<br class="clearfix">

@@ -1,0 +1,15 @@
+<% provide(:title, "Login") %>
+
+<h1>Sing in page</h1>
+
+<div class="col-xs-4" >
+	<%= form_for(:session, url: sessions_path) do |f| %>
+		<%= f.label :email, class: "col-xs-6" %>
+		<%= f.text_field :email, class: "col-xs-6" %>
+	<br style="clear: both; height: 3px;" >
+		<%= f.label :password, class: "col-xs-6" %>
+		<%= f.password_field :password, class: "col-xs-6" %>
+	<br style="clear: both;" >
+		<%= f.submit "Log in", class: "btn btn-primary pull-right" %>
+	<% end %>
+</div>

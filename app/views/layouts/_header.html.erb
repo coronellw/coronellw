@@ -1,0 +1,30 @@
+<header class="row">
+	<div class="container">
+		<div id="logo">
+			<%= link_to image_tag("movieLogo.svg", alt: "Shortcuts", size: "50x50"), root_path %>
+			<br>
+			<h1><%= link_to "Movie site", root_path %></h1>
+		</div>
+		<div class="pull-right">
+			<div id="search-bar">
+				<%= form_tag("/search", method: "get") do %>
+					<%= text_field_tag :search_request, nil, placeholder: "Search here", class: "search-bar-field" %>
+					<%= submit_tag "Go", class: "btn btn-primary" %>
+				<% end %>
+			</div>
+			<br style="clear: both;">
+
+			<% if signed_in? %>
+				<div class="pull-right"> 
+					Logged as <em><%= link_to current_user.name, current_user %></em>
+					|
+					<%= link_to "log out", signout_path, method: "delete" %>
+				</div>
+			<% else %>
+				<div class="pull-right">
+					<%= link_to "log in", signin_path %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</header>

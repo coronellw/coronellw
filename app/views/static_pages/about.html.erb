@@ -1,0 +1,24 @@
+<% provide(:title, "about") %>
+<h1>This is the about page</h1>
+
+<p>
+  <label>Name:</label>
+  <%= @user.name %>
+</p>
+
+<p>
+  <label>Email:</label>
+  <%= @user.email %>
+</p>
+
+<p>
+	<label>Something:</label>
+	<%= params[:something] %>
+</p>
+
+<p>
+	<label>Stuff:</label>
+	<%= params[:stuff] %>
+</p>
+
+<%= link_to "back to home", root_path %>

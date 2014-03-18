@@ -1,0 +1,11 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* color variables */
+$frontColor: #979;
+
+canvas {
+	background: #000;
+	border: 1px solid $frontColor;
+	color: #55ea00;
+}

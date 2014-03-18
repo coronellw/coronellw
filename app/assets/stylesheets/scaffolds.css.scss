@@ -1,0 +1,245 @@
+/* imports */
+@import "bootstrap";
+
+/* custom fonts */
+@font-face {
+    font-family: 'quicksand';
+    src: asset-url('quicksand-regular-webfont.eot', font);
+    src: asset-url('quicksand-regular-webfont.eot?#iefix', font) format('embedded-opentype'),
+         asset-url('quicksand-regular-webfont.woff', font) format('woff'),
+         asset-url('quicksand-regular-webfont.ttf', font) format('truetype'),
+         asset-url('quicksand-regular-webfont.svg#quicksandregular', font) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* variables */
+$bgColor: #226;
+$frontColor: #979;
+$detailsColor: #5555AA;
+
+/* mixins */
+
+@mixin font_style {
+  font-family: quicksand, "Courier New", helvetica, verdana, arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 18px;
+}
+
+body {
+  background-color: $bgColor;
+  color: $frontColor;
+  @include font_style;
+}
+
+p, ol, ul, td {
+  @include font_style;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: lighten($frontColor, 40%);
+  font-weight: bold;
+  text-decoration: none;
+  &:visited {
+    color: lighten($frontColor, 40%);
+  }
+  &:hover {
+    color: darken($frontColor, 15%);
+  }
+}
+
+label {
+  font-size: 1.3em;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+em {
+  color: white;
+  font-weight: bold;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+/* header */
+header {
+  background: #000;
+  color: white;
+  padding-bottom: 10px;
+}
+
+#logo {
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+#logo h1, #logo h1 a {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+#logo a {
+  margin: 0 auto;
+}
+
+#logo, header #search-bar {
+  display: inline-block;
+  vertical-align: center;
+}
+
+#logo a{
+  font-size: 20px;
+  text-transform: capitalize;
+  vertical-align: center;
+}
+
+#search-bar {
+  float: right;
+  margin-top: 15px;
+  position: relative;
+}
+
+/* footer */
+footer {
+  background: #fff;
+  color: black;
+  padding-top: 15px;
+  margin: 20px 0px;
+}
+
+footer nav ul {
+  list-style: none;
+}
+
+footer nav ul li {
+  border-right: 1px solid #000;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+footer nav ul li:last-child {
+  border-right: none;
+  display: inline-block;
+}
+
+footer a, footer a:visited {
+  color: darken($frontColor, 30%);
+  &:hover, {
+    color: $frontColor;
+  }
+}
+
+/* Forms */
+input, textarea, select, .uneditable-input{
+  border-radius: 3px;
+  color: black;
+  font-family: arial sans-serif;
+  padding: 2px 0px 2px 5px;
+}
+
+.btn {
+  font-family: quicksand, "Courier New", helvetica, verdana, arial, sans-serif;
+}
+
+table, th, td, tr {
+  border: 7px solid transparent;
+}
+
+#div1, #div2, #div3, #div4, #div5 {
+  background: #000;
+  border: 1px solid white;
+  height: 300px;
+  margin: 10px;
+  padding: 15px;
+  width: 90%;
+}
+
+.claseObjetivo {
+  & li {
+      border-right: 1px solid $detailsColor;
+      border-top: 1px solid $detailsColor;
+      &:hover{
+        text-align:left;
+        border-right: 1px solid $frontColor;
+        border-top: 1px solid $frontColor;
+        &:last-child{
+          border-bottom: 1px solid $frontColor;
+        }
+      }
+      &:last-child{
+        border-bottom: 1px solid $detailsColor;
+      }
+  }  
+}
+
+.claseObjetivo .active {
+  background: #000;
+  & a{
+    color: $frontColor;
+    &:hover{
+      background: #000;
+      color: $frontColor;
+    }
+  }
+}
+
+#sidebar{
+  position: fixed;
+  left: 0;
+  top: 100px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.myField {
+  margin: 10px;
+}
