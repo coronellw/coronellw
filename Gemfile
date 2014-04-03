@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -16,6 +17,9 @@ end
 
 #omniauth for google, facebook and twitter
 gem 'omniauth', '~> 1.2.1'
+gem 'omniauth-twitter', '~> 1.0.1'
+gem 'omniauth-facebook', '~> 1.6.0'
+gem 'omniauth-google-oauth2', '~> 0.2.2'
 gem 'devise'
 
 # Use SCSS for stylesheets
