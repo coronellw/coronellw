@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
 	require "execjs"
 
 	def about
-		@user = User.new(user_params)
+		@user = User.new(user_params) if signed_in?
 	end
 
 	def contact

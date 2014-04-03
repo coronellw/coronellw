@@ -1,6 +1,7 @@
 <% provide(:title, "about") %>
 <h1>This is the about page</h1>
 
+<% if signed_in? %>
 <p>
   <label>Name:</label>
   <%= @user.name %>
@@ -20,5 +21,6 @@
 	<label>Stuff:</label>
 	<%= params[:stuff] %>
 </p>
+<% end %>
 
 <%= link_to "back to home", root_path %>

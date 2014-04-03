@@ -1,29 +1,78 @@
 <% provide(:title, 'Home')  %>
-
-<h1>This is the home page using Quicksand font</h1>
-
-<%= form_for @user, url: {controller: "static_pages", action: "about"} do |f| %>
-	<div class="field">
-		<%= f.label :name, class: "col-xs-2" %>
-		<%= f.text_field :name %>
+<center>
+	<h2>Winston Coronell</h2>
+</center>
+<div class="col-md-12">
+	<div class="col-md-8">
+		<h3><i>Hello!</i> Let me introduce myself</h3>
+		<p>My name is <em>Winston Coronell</em>, I'm an enthusiastic system engineer who is looking to forwar to work as a <em>web developer</em>, I created this website to show some of my abilities, so now that you're here, just take a look and enjoy, if you find my site and skill desired for some proyect, don't hesitate to contact me...<%= link_to "here", "#" %>, I'll be more than glad to work with your team, so, let me show you what I have.</p>
+		<p>First of all, let me tell you that this site is fully functional, and the code is available on github through this <%= link_to "link", "https://github.com/coronellw/coronellw.git" %> there, you can view the code as it was done</p>
 	</div>
-
-	<div class="field">
-		<%= f.label :email, class: "col-xs-2" %>
-		<%= f.text_field :email %>
+	<div class="col-md-4">
+		<!-- <h3>Wanna know me? this is my picture</h3> -->
+		<center>
+			<%= image_tag("me.png", alt: "Hello, this is how I look", size: "200x200") %>
+		</center>
 	</div>
+</div>
 
-	<div class="field">
-		<%= label_tag :something, "Something", class: "col-xs-2" %>
-		<%= text_field_tag :something %>
-	</div>
+<div class="col-md-6" >
+	<h3>So what can I do?</h3>
+	<p>You might be wondering <em>why</em> should I hire this guy? Well, let me just inform you what you will be seeing in this site</p>
+	<ul>
+		<li>Ruby on Rails</li>
+		<li>Angular JS</li>
+		<li>Mongo DB / Postgre</li>
+		<li>Twitter bootstrap</li>
+		<li>Coffe script</li>
+		<li>JSon</li>
+		<li>Unicorn / webrick</li>
+		<li>Web services</li>
+		<li>Behavior Driven Development</li>
+		<li>I have worked with <em>canvas</em> too, take a look at this <%= link_to "game", game_path %>.</li>
+	</ul>
+</div>
 
-	<div class="field">
-		<%= label_tag :stuff, "Stuff", class: "col-xs-2" %>
-		<%= text_field_tag :stuff %>
-	</div>
+<div class="col-md-6">
+	<h3>That's not all</h3>
+	<p>In the other hand I also have some other set of skill you can find usefull such as...</p>
+	<ul>
+		<li>Java EE</li>
+		<li>Primefaces</li>
+		<li>Glassfish</li>
+		<li>Major relational DBMS like mysql, oracle, db2, informix, sqlite3</li>
+		<li>Create JS (easelJS, tweenJS, soundJS, preloadJS)</li>
+		<li>jQuery</li>
+		<li>PHP</li>
+		<li>Git, github, svn</li>
+	</ul>
+</div>
 
-	<%= f.submit "Go next", class: "col-xs-offset-3 btn btn-primary" %>
-<% end %>
+<br style="clear: both;">
+<div style="display: none;">
+	<%= form_for @user, url: {controller: "static_pages", action: "about"} do |f| %>
+		<div class="field">
+			<%= f.label :name, class: "col-xs-2" %>
+			<%= f.text_field :name %>
+		</div>
+
+		<div class="field">
+			<%= f.label :email, class: "col-xs-2" %>
+			<%= f.text_field :email %>
+		</div>
+
+		<div class="field">
+			<%= label_tag :something, "Something", class: "col-xs-2" %>
+			<%= text_field_tag :something %>
+		</div>
+
+		<div class="field">
+			<%= label_tag :stuff, "Stuff", class: "col-xs-2" %>
+			<%= text_field_tag :stuff %>
+		</div>
+
+		<%= f.submit "Go next", class: "col-xs-offset-3 btn btn-primary" %>
+	<% end %>
+</div>
 <br>
 <br class="clearfix">
