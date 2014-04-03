@@ -27,7 +27,9 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.15)
+    bcrypt (3.1.7-x86-mingw32)
     bcrypt-ruby (3.0.1-x64-mingw32)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.10)
@@ -40,8 +42,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -57,6 +66,10 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
+    omniauth (1.2.1)
+      hashie (>= 1.2, < 3)
+      rack (~> 1.0)
+    orm_adapter (0.5.0)
     pg (0.15.1-x86-mingw32)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -114,6 +127,8 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
     will_paginate (3.0.5)
 
 PLATFORMS
@@ -124,9 +139,11 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.1.0)
   bootstrap-will_paginate (~> 0.0.10)
   coffee-rails (~> 4.0.0)
+  devise
   execjs (~> 2.0.2)
   jbuilder (~> 1.2)
   jquery-rails
+  omniauth (~> 1.2.1)
   pg (= 0.15.1)
   rails (= 4.0.0)
   rails_12factor (= 0.0.2)
