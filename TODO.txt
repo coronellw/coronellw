@@ -1,0 +1,14 @@
+TODO List
+- Use mongoDB
+- Implement omniauth
+	- with google_oauth2
+	- with facebook
+	- with twitter
+- Implement angular js
+	- create fake instances of a certain object
+	- sort them
+	- animate with angular and jquery
+- Implement space game with create js
+	- add sound
+	- add preload animation
+	- test tween js
